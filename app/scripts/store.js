@@ -1,0 +1,1 @@
+AcornsTest.ApplicationAdapter = DS.FixtureAdapter;
