@@ -1,0 +1,11 @@
+<div class="well">
+    <ul class="list-group">
+    {{#each model}}
+        <li class="list-group-item">
+            {{#link-to 'stock' this }}
+                <h4>{{ source_name }} - <small>{{ name }}</small> </h4>
+            {{/link-to}}
+        </li>
+    {{/each}}
+    </ul>
+</div>

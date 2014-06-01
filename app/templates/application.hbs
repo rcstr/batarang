@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Your App</a>
+            <a class="navbar-brand" href="#">Stock Info</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
         </div>
@@ -16,14 +16,13 @@
         <div class="row">
             <div>
                 <div class="col-md-3">
-                    <div class="well sidebar-nav">
-                        <strong>Colors</strong>
-                        <ul class="list-group">
-                        {{#each item in controller}}
-                            <li class="list-group-item">{{item}}</li>
-                        {{/each}}
-                        </ul>
-                    </div>
+                    <form {{action "search" on="submit"}}>
+                        <div class="form-group">
+                            <label for="s"></label>
+                            {{input type="search" class="form-control" name="s" id="s" valueBinding="s" value=s placeholder="GOOG, SEC, STATNOR" required="required"}}
+                        </div>
+                        <input type="submit" value="Search" class="btn btn-default" />
+                    </form>
                 </div>
                 <div class="col-md-9">
                     {{outlet}}

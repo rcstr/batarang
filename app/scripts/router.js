@@ -1,3 +1,9 @@
 AcornsTest.Router.map(function () {
-  // Add your routes here
+  "use strict";
+
+  this.resource('stocks', function(){
+    this.route('search', { path: '/search/:symbol' });
+    this.resource('stock', { path: '/:source_code/:code' });
+  });
+  
 });
