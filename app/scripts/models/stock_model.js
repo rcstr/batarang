@@ -4,5 +4,9 @@ AcornsTest.Stock = DS.Model.extend({
   code: DS.attr('string'),
   name: DS.attr('string'),
   description: DS.attr('string'),
-  display_url: DS.attr('string')
+  display_url: DS.attr('string'),
+  source_name: DS.attr('string'),
+  data: DS.attr(null, { defaultValue: [] })
 });
+
+AcornsTest.Stock.FIXTURES = [];
