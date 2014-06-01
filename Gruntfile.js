@@ -332,6 +332,12 @@ module.exports = function (grunt) {
                 src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
+        },
+        'gh-pages': {
+            options: {
+              base: '<%= yeoman.dist %>'
+            },
+            src: '**/*'
         }
     });
 
@@ -384,5 +390,10 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'build'
+    ]);
+
+    grunt.registerTask('pub', [
+        'build',
+        'gh-pages'
     ]);
 };
