@@ -33,12 +33,7 @@ AcornsTest.StockRoute = Ember.Route.extend({
             slug: data.source_code+'|'+data.code
           });
         }
-    });
-  },
-
-  setupController: function(controller, model) {
-    "use strict";
-    controller.set('set', model);
+    })
   }
 });
 
