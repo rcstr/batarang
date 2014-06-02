@@ -1,7 +1,7 @@
     <ul class="list-group">
     {{#each model}}
         <li class="list-group-item">
-            {{#link-to 'stock' this }}
+            {{#link-to 'stock' slug }}
                 <h4>{{ source_name }} - <small>{{ name }}</small> </h4>
             {{/link-to}}
         </li>

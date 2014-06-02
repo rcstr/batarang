@@ -3,7 +3,7 @@ AcornsTest.Router.map(function () {
 
   this.resource('stocks', function(){
     this.route('search', { path: '/search/:symbol' });
-    this.resource('stock', { path: '/:source_code/:code' });
+    this.resource('stock', { path: '/:slug' });
   });
   
 });
